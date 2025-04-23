@@ -1,22 +1,27 @@
 
-
-
 # License Plate Detection using YOLOv8 🚗🔍
 
 This project leverages **YOLOv8**, a cutting-edge object detection model, to detect license plates in images and videos. The solution supports both training and inference using a custom dataset sourced from Roboflow. It is implemented in a Jupyter Notebook and includes detailed explanations, visual outputs, and performance metrics.
 
+<div align="center">
+  <img src="ScreenRecording2025-04-19at9.22.30PM-ezgif.com-video-to-gif-converter.gif" alt="Alt Text" />
+</div>
+
 ## 🧠 Project Structure
 
 ### 1. **Setup and Installation**
+
 - Installs required libraries such as `ultralytics`, `opencv-python`, and `matplotlib`.
 - Verifies YOLOv8 installation and ensures the environment is ready for training.
 
 ### 2. **Data Preparation**
+
 - Dataset is downloaded from [Roboflow](https://universe.roboflow.com/) and unzipped into a local directory.
 - `data.yaml` is used to define class names and dataset paths.
 - Images and labels are structured into `train`, `valid`, and `test` folders.
 
 ### 3. **Model Training**
+
 - Trains YOLOv8 on the custom license plate dataset.
 - Configurable parameters include:
   - `model = YOLO("yolov8n.pt")` (can be changed to `s`, `m`, `l`, or `x` variants)
@@ -24,11 +29,13 @@ This project leverages **YOLOv8**, a cutting-edge object detection model, to det
   - `imgsz = 640`
 
 ### 4. **Validation and Testing**
+
 - Loads the best weights after training: `runs/detect/train/weights/best.pt`.
 - Evaluates model performance on validation and test sets.
 - Visualizes bounding boxes on images with predictions.
 
 ### 5. **Custom Inference**
+
 - Performs inference on:
   - Images
   - Videos
@@ -99,6 +106,7 @@ pip install ultralytics opencv-python matplotlib
 ## 🔗 Run Notebook
 
 To run the notebook:
+
 1. Clone the repo or upload the `.ipynb` file to Google Colab.
 2. Ensure dataset is uploaded or downloaded via the Roboflow link.
 3. Run all cells in order for training and inference.
@@ -108,5 +116,3 @@ To run the notebook:
 ## 🔒 License
 
 This project is licensed under the [MIT License](LICENSE).
-
-
