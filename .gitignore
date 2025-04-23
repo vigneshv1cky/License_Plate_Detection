@@ -172,3 +172,12 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+
+runs/
+train/
+test/
+valid
+.tmp.*
+roboflow.zip
+.DS_Store
